@@ -1,6 +1,7 @@
 @import '../../styles/index.scss';
 
 .footerContainer {
+  z-index: 4;
   @include container;
   place-items: center;
   display: grid;
@@ -21,13 +22,11 @@
 }
 
 .next {
-  font-size: toRem(18);
-  text-transform: uppercase;
-  color: var(--color-grey-50);
+  @include textSecondary;
 }
 
 .name {
-  font-size: toRem(24);
+  @include textMain(var(--color-black-80));
 
   &::after {
     content: ' ...........';

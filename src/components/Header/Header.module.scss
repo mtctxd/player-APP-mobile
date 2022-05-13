@@ -1,32 +1,30 @@
 @import '../../styles/index.scss';
 
 .headerContainer {
-    @include container;
-    display: grid;
-    place-items: center;
-    height: 131px;
+  z-index: 4;
+  @include container;
+  display: grid;
+  place-items: center;
+  height: 131px;
 }
 
 .itemsContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .type {
-    font-size: toRem(18);
-    text-transform: uppercase;
-    color: var(--color-grey-50);
+  @include textSecondary;
 }
 
 .name {
-    font-size: toRem(24);
-    color: var(--color-white-100);
+  @include textMain(var(--color-white-100));
 }

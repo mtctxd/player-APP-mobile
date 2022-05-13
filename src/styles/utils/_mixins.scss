@@ -1,14 +1,33 @@
 @mixin container {
-    padding-right: 56px;
-    padding-left: 56px;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
 }
 
 @mixin fontSize($size) {
-    font-size: $size; //Fallback in px
-    font-size: calculateRem($size);
-  }
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
 
-  @mixin rem-calc($sizeValue: 16) {
-      font-size: $sizeValue + rem;
-    font-size: ($sizeValue / 16) + px;
-  }
+@mixin rem-calc($sizeValue: 16) {
+  font-size: $sizeValue + rem;
+  font-size: ($sizeValue / 16) + px;
+}
+
+
+// fonts
+
+@mixin textSecondary {
+  font-size: toRem(18);
+  text-transform: uppercase;
+  color: var(--color-grey-50);
+}
+
+@mixin textMain($color) {
+    font-size: toRem(24);
+    color: $color;
+}
+
+@mixin textHeadings($color) {
+    font-size: toRem(36);
+    color: $color;
+}

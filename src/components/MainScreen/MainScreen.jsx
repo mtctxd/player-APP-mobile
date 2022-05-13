@@ -1,9 +1,9 @@
-import React from 'react'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
-import MainPart from '../MainPart/MainPart'
+import React from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import MainPart from '../MainPart/MainPart';
 
-import style from './MainScreen.module.scss'
+import style from './MainScreen.module.scss';
 
 const MainScreen = () => {
   return (
@@ -12,7 +12,7 @@ const MainScreen = () => {
       <MainPart />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MainScreen
+export default MainScreen;
