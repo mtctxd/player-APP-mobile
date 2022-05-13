@@ -1,0 +1,43 @@
+@import '../../styles/index.scss';
+
+.footerContainer {
+  @include container;
+  place-items: center;
+  display: grid;
+  height: 89px;
+  background-color: var(--color-white-100);
+}
+
+.itemsContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.next {
+  font-size: toRem(18);
+  text-transform: uppercase;
+  color: var(--color-grey-50);
+}
+
+.name {
+  font-size: toRem(24);
+
+  &::after {
+    content: ' ...........';
+    letter-spacing: 10px;
+    color: var(--color-grey-50);
+  }
+}
+
+.time {
+  align-self: flex-end;
+  font-size: toRem(24);
+  color: var(--color-grey-50);
+}

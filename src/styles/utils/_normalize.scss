@@ -1,0 +1,14 @@
+ul,
+li,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-weight: 400;
+    font-family: var(--font-main);
+}

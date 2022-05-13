@@ -1,10 +1,7 @@
-function App() {
+import MainScreen from './components/MainScreen/MainScreen';
 
-  return (
-    <div className="App">
-      App
-    </div>
-  )
+function App() {
+  return <MainScreen />;
 }
 
-export default App
+export default App;

@@ -1,0 +1,14 @@
+@mixin container {
+    padding-right: 56px;
+    padding-left: 56px;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+  }
+
+  @mixin rem-calc($sizeValue: 16) {
+      font-size: $sizeValue + rem;
+    font-size: ($sizeValue / 16) + px;
+  }
