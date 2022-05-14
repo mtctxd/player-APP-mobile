@@ -20,7 +20,7 @@ const MainPart = () => {
       <div className={style.actions}>
         <img src="./assets/shuffle_ico.svg" alt="shufle" />
         <img src="./assets/previous_ico.svg" alt="previous" />
-        <PlayButton image="./assets/Play_inactive.png"alt="play"/>
+        <PlayButton />
         <img src="./assets/next_ico.svg" alt="next" />
         <img src="./assets/repeat_ico.svg" alt="random" />
       </div>

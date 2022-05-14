@@ -41,11 +41,7 @@ const TrackList = () => {
           <div className={style.song}>Self Conscious</div>
           <div className={style.artist}>Kanye west</div>
         </div>
-        <PlayButton
-          image="./assets/Play_inactive.png"
-          alt="playInactive"
-          style={style.play}
-        />
+        <PlayButton type="small" />
       </div>
       <div className={style.mainPart}>
         <ul className={style.list}>

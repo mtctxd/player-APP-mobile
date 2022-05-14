@@ -1,1 +1,24 @@
 @import '../../styles/index.scss';
+
+.container {
+  box-sizing: border-box;
+  position: relative;
+  width: 257px;
+  height: 261px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.smallWrapper {
+    right: 20px;
+}
+
+.small {
+  height: var(--header-height);
+  align-items: flex-end;
+}

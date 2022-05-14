@@ -2,20 +2,42 @@ import React from 'react';
 import { useSnapshot } from 'valtio';
 import state from '../../state';
 
-const PlayButton = ({ style }) => {
+import style from './PlayButton.module.scss';
+
+const PlayButton = ({ type }) => {
   const { isSongPlaying, toggleSongPlaying } = useSnapshot(state);
 
   return (
-    <div className={style} onClick={() => toggleSongPlaying()}>
-      <img
-        src={
-          isSongPlaying
-            ? './assets/Play_active.png'
-            : './assets/Play_inactive.png'
+    <div
+      className={`${style.container} ${type === 'small' ? style.small : ''}`}
+    >
+      <div
+        className={`${style.wrapper} ${
+          type === 'small' ? `${style.small} ${style.smallWrapper}` : ''
+        }`}
+        style={
+          type === 'small' && !isSongPlaying
+            ? {
+                display: 'flex',
+                placeItems: 'center',
+              }
+            : {}
         }
-        alt={''}
-        className={style}
-      />
+      >
+        <img
+          onClick={() => toggleSongPlaying()}
+          src={
+            isSongPlaying
+              ? './assets/Play_active.png'
+              : './assets/Play_inactive.png'
+          }
+          alt={''}
+          style={{
+            height: type === 'small' && !isSongPlaying ? '66%' : '100%',
+            lineHeight: '131px',
+          }}
+        />
+      </div>
     </div>
   );
 };

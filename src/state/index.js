@@ -7,12 +7,12 @@ const initialState = {
   toggleList: () => ({
     ...initialState,
     isMenuActive: (state.isMenuActive = false),
-    isListActive: (!state.isListActive),
+    isListActive: (state.isListActive = !state.isListActive),
   }),
   toggleMenu: () => ({
     ...initialState,
-    isMenuActive: (!state.isMenuActive),
-    isListActive: (state.isListActive = false),
+    isMenuActive: !state.isMenuActive,
+    isListActive: (state.isMenuActive = !state.isMenuActive),
   }),
   turnOffAll: () => ({
     ...initialState,
@@ -20,9 +20,9 @@ const initialState = {
     isListActive: false,
   }),
   toggleSongPlaying: () => ({
-      ...initialState,
-      isSongPlaying: !initialState.isSongPlaying
-  })
+    ...initialState,
+    isSongPlaying: (state.isSongPlaying = !state.isSongPlaying),
+  }),
 };
 
 const state = proxy(initialState);
