@@ -12,7 +12,7 @@ const TrackList = () => {
   return (
     <div
       className={`${style.listContainer} ${
-        snapshot.isListClicked ? style.active : ''
+        snapshot.isListActive ? style.active : ''
       }`}
     >
       <div className={style.header}>

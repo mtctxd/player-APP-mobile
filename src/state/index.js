@@ -1,16 +1,25 @@
-import { proxy } from "valtio";
+import { proxy } from 'valtio';
 
 const initialState = {
-    isListClicked: false,
-    isMenuClicked: false,
-    toggleList: () => ({
-        ...initialState,
-        isListClicked: state.isListClicked = !state.isListClicked
-    }),
-}
+  isListActive: false,
+  isMenuActive: false,
+  toggleList: () => ({
+    ...initialState,
+    isMenuActive: (state.isMenuActive = false),
+    isListActive: (state.isListActive = !state.isListActive),
+  }),
+  toggleMenu: () => ({
+    ...initialState,
+    isMenuActive: (state.isMenuActive = !state.isMenuActive),
+    isListActive: (state.isListActive = false),
+  }),
+  turnOffAll: () => ({
+    ...initialState,
+    isMenuActive: false,
+    isListActive: false,
+  }),
+};
 
-const state = proxy(
-    initialState,
-)
+const state = proxy(initialState);
 
 export default state;
