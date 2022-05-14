@@ -1,12 +1,20 @@
 import React from 'react';
+import { useSnapshot } from 'valtio';
+import state from '../../state';
 
 import style from './Footer.module.scss';
 
 const Footer = () => {
+  const snapshot = useSnapshot(state);
+
   return (
     <div className={style.footerContainer}>
       <div className={style.itemsContainer}>
-        <div className={style.menu}>
+        <div className={style.menu}
+          onClick={() => {
+            snapshot.toggleList();
+          }}
+        >
           <svg
             width="38"
             height="27"

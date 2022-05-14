@@ -9,6 +9,7 @@
   background: url('../../../assets/BG.png');
   background-color: #1b1b1b;
   z-index: 1;
+  overflow: hidden;
 
   &::after {
     content: '';

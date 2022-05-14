@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSnapshot } from 'valtio';
 
 import style from './TrackList.module.scss';
 import songs from '../../data/songs.json';
-import calculateDots from '../../features/calculateDots';
+import state from '../../state';
 
 const TrackList = () => {
+  const snapshot = useSnapshot(state);
+
   return (
-    <div className={style.container}>
+    <div
+      className={style.listContainer}
+      style={{
+        transform: `translateY(${snapshot.isListClicked ? 0 : 100}%)`,
+        transition: `all 250`
+      }}
+    >
       <div className={style.header}>
-        <div className={style.arrow}>
+        <div
+          className={style.arrow}
+          onClick={() => {
+            snapshot.toggleList();
+          }}
+        >
           <svg
             width="16"
             height="38"
@@ -40,17 +54,22 @@ const TrackList = () => {
             <li className={style.list__item} key={songItem.name}>
               <div className={style.number}>{`${index + 1}.`}</div>
               <div className={style.name}>
-                <span className={style.songName}>
-                {songItem.name}
+                <span className={style.songName}>{songItem.name}</span>
+                <span className={style.dots}>
+                  ........................................................
                 </span>
-                <span className={style.dots}>........................................................</span>
               </div>
               <div className={style.duration}>{songItem.duration}</div>
             </li>
           ))}
         </ul>
         <div className={style.list__button}>shuffle play</div>
-        <div className={style.list__next}>
+        <div
+          className={style.list__next}
+          onClick={() => {
+            snapshot.toggleList();
+          }}
+        >
           <svg
             width="29"
             height="16"
