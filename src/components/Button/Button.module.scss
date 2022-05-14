@@ -1,0 +1,19 @@
+@import '../../styles/index.scss';
+
+.button {
+  @include textMain(var(--color-white-100), 20);
+  display: inline-block;
+  height: 59px;
+  line-height: 59px;
+  width: 100%;
+  text-align: center;
+  border-radius: 59px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  @include buttonActions(
+    var(--color-green-80),
+    var(--color-green-100),
+    var(--color-green-50)
+  );
+}

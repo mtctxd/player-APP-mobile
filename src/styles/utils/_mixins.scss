@@ -40,3 +40,29 @@
 @mixin transition($type: transform, $time: 200ms, $style: ease-in-out) {
   transition: $type $time $style;
 }
+
+@mixin buttonActions($color1, $color2, $color3) {
+  background-color: $color1;
+  transition: background-color 200ms ease-in-out;
+
+  &:hover {
+    background-color: $color2;
+  }
+
+  &:active {
+    background-color: $color3;
+  }
+}
+
+@mixin svgActions($color1, $color2, $color3) {
+  fill: $color1;
+  transition: fill 200ms ease-in-out;
+
+  &:hover {
+    fill: $color2;
+  }
+
+  &:active {
+    fill: $color3;
+  }
+}

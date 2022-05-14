@@ -6,6 +6,7 @@ import songs from '../../data/songs.json';
 import state from '../../state';
 import PlayButton from '../PlayButton/PlayButton';
 import IconTargetable from '../IconTargetable/IconTargetable';
+import Button from '../Button/Button';
 
 const TrackList = () => {
   const snapshot = useSnapshot(state);
@@ -17,12 +18,7 @@ const TrackList = () => {
       }`}
     >
       <div className={style.header}>
-        <div
-          className={style.arrow}
-          onClick={() => {
-            snapshot.toggleList();
-          }}
-        >
+        <IconTargetable handler={snapshot.toggleList}>
           <svg
             width="16"
             height="29"
@@ -37,7 +33,7 @@ const TrackList = () => {
               fill="#0FD65A"
             />
           </svg>
-        </div>
+        </IconTargetable>
         <div className={style.text}>
           <div className={style.song}>Self Conscious</div>
           <div className={style.artist}>Kanye west</div>
@@ -59,8 +55,7 @@ const TrackList = () => {
             </li>
           ))}
         </ul>
-        <div className={style.list__button}>shuffle play</div>
-
+        <Button>shuffle play</Button>
         <IconTargetable handler={snapshot.toggleList}>
           <svg
             width="29"

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: clamp(300px, calc(18.75rem + ((1vw - 5.78px) * 44.843)), 500px);
 }
 .swiper-wrapper {
   display: flex;

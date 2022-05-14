@@ -2,15 +2,25 @@
 
 .container {
   position: relative;
+
+  & svg * {
+    @include svgActions(
+      var(--color-green-80),
+      var(--color-green-100),
+      var(--color-green-50)
+    );
+  }
 }
 
 .aria {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
 }
+
+
