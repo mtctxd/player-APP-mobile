@@ -3,14 +3,15 @@ import { proxy } from 'valtio';
 const initialState = {
   isListActive: false,
   isMenuActive: false,
+  isSongPlaying: false,
   toggleList: () => ({
     ...initialState,
     isMenuActive: (state.isMenuActive = false),
-    isListActive: (state.isListActive = !state.isListActive),
+    isListActive: (!state.isListActive),
   }),
   toggleMenu: () => ({
     ...initialState,
-    isMenuActive: (state.isMenuActive = !state.isMenuActive),
+    isMenuActive: (!state.isMenuActive),
     isListActive: (state.isListActive = false),
   }),
   turnOffAll: () => ({
@@ -18,6 +19,10 @@ const initialState = {
     isMenuActive: false,
     isListActive: false,
   }),
+  toggleSongPlaying: () => ({
+      ...initialState,
+      isSongPlaying: !initialState.isSongPlaying
+  })
 };
 
 const state = proxy(initialState);
