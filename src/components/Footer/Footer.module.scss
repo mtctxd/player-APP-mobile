@@ -36,7 +36,5 @@
 }
 
 .time {
-  align-self: flex-end;
-  font-size: toRem(24);
-  color: var(--color-grey-50);
+  @include textSecondaryBig;
 }

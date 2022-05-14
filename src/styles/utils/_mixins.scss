@@ -13,7 +13,6 @@
   font-size: ($sizeValue / 16) + px;
 }
 
-
 // fonts
 
 @mixin textSecondary {
@@ -22,12 +21,18 @@
   color: var(--color-grey-50);
 }
 
-@mixin textMain($color) {
-    font-size: toRem(24);
-    color: $color;
+@mixin textMain($color, $size:24) {
+  font-size: toRem($size);
+  color: $color;
 }
 
 @mixin textHeadings($color) {
-    font-size: toRem(36);
-    color: $color;
+  font-size: toRem(36);
+  color: $color;
+}
+
+@mixin textSecondaryBig {
+  align-self: flex-end;
+  font-size: toRem(24);
+  color: var(--color-grey-50);
 }
