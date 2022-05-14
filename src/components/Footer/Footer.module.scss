@@ -5,7 +5,7 @@
   @include container;
   place-items: center;
   display: grid;
-  height: 89px;
+  height: var(--footer-height);
   background-color: var(--color-white-100);
 }
 

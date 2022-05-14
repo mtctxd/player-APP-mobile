@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const PlayButton = ({image, style, alt}) => {
+const PlayButton = ({ image, style, alt }) => (
+  <img src={image} alt={alt} className={style} />
+);
 
-    console.log(style);
-  return (
-    <img src={image} alt={alt} className={style}/>
-  )
-}
-
-export default PlayButton
+export default PlayButton;

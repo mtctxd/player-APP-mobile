@@ -6,6 +6,11 @@
   display: grid;
   place-items: center;
   height: var(--header-height);
+  transform: scale(100%);
+}
+
+.faded {
+  transform: scale(0);
 }
 
 .itemsContainer {

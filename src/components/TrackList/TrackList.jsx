@@ -24,15 +24,15 @@ const TrackList = () => {
         >
           <svg
             width="16"
-            height="38"
-            viewBox="0 0 16 38"
+            height="29"
+            viewBox="0 0 16 29"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M0.042421 19.0281C-0.0550559 18.4626 0.0528727 17.8765 0.374947 17.4691L13.4818 0.888254C14.0124 0.217172 14.926 0.281419 15.5186 1.03104C16.1112 1.78065 16.1619 2.93661 15.6315 3.60766L3.40389 19.0762L15.066 34.0067C15.5769 34.6608 15.528 35.7876 14.9573 36.5182C14.3865 37.2489 13.5064 37.3116 12.9955 36.6574L0.371075 20.495C0.0707918 20.1105 -0.0362106 19.5627 0.042421 19.0281Z"
+              d="M0.0424175 14.7064C-0.0550593 14.26 0.0528693 13.7972 0.374944 13.4756L13.4818 0.385468C14.0124 -0.144333 14.926 -0.093612 15.5186 0.498191C16.1112 1.08999 16.1619 2.00259 15.6315 2.53237L3.40388 14.7443L15.066 26.5316C15.5769 27.048 15.528 27.9376 14.9573 28.5144C14.3865 29.0913 13.5064 29.1407 12.9955 28.6242L0.371072 15.8645C0.0707884 15.5609 -0.036214 15.1285 0.0424175 14.7064Z"
               fill="#0FD65A"
             />
           </svg>
@@ -41,7 +41,11 @@ const TrackList = () => {
           <div className={style.song}>Self Conscious</div>
           <div className={style.artist}>Kanye west</div>
         </div>
-        <PlayButton image="./assets/Play_inactive.png" alt="playInactive" style={style.play}/>
+        <PlayButton
+          image="./assets/Play_inactive.png"
+          alt="playInactive"
+          style={style.play}
+        />
       </div>
       <div className={style.mainPart}>
         <ul className={style.list}>

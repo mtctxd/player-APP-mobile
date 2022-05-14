@@ -1,10 +1,18 @@
 import React from 'react';
+import { useSnapshot } from 'valtio';
+import state from '../../state';
 
 import style from './Header.module.scss';
 
 const Header = () => {
+  const snapshot = useSnapshot(state);
+
   return (
-    <div className={style.headerContainer}>
+    <div
+      className={`${style.headerContainer} ${
+        snapshot.isListClicked || snapshot.isMenuClicked ? style.faded : ''
+      }`}
+    >
       <div className={style.itemsContainer}>
         <div className={style.arrow}>
           <svg
