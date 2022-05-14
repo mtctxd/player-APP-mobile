@@ -9,7 +9,7 @@ const PlayButton = ({ type }) => {
 
   return (
     <div
-      className={`${style.container} ${type === 'small' ? style.small : ''}`}
+      className={`${style.container} ${type === 'small' ? `${style.small} ${style.smallContainer}` : ''}`}
     >
       <div
         className={`${style.wrapper} ${

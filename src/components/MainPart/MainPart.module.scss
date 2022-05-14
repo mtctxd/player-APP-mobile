@@ -1,7 +1,6 @@
 @import '../../styles/index.scss';
 
 .mainPartContainer {
-  @include container;
   z-index: 4;
   flex: 1;
   display: flex;
@@ -14,8 +13,15 @@
   text-align: center;
 }
 
+.slider {
+  width: 100%;
+  flex-grow: 1;
+  background-color: red;
+}
+
 .artist {
   @include textSecondary;
+  @include container;
 }
 
 .name {
@@ -23,11 +29,8 @@
 }
 
 .actions {
+  @include container;
   width: 100%;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
   display: grid;
   grid-template-columns: auto auto 257px auto auto;
   align-items: center;
@@ -36,6 +39,7 @@
 
 .progress {
   @include textSecondary;
+  @include container;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -70,6 +74,7 @@
 }
 
 .progressCanva {
+  @include container;
   font-size: 0px;
   align-self: flex-start;
   margin-left: calc(var(--container-padding) * -1);

@@ -11,7 +11,7 @@
   background: #1b1b1b;
   mix-blend-mode: normal;
   opacity: 0.96;
-  transition: all 1000;
+  transition: transform 200ms ease-in-out;
   transform: translateX(100%);
 }
 
@@ -64,4 +64,5 @@
 
 .action {
   @include textMain(var(--color-white-100));
+  cursor: pointer;
 }

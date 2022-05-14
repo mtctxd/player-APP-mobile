@@ -5,6 +5,7 @@ import style from './TrackList.module.scss';
 import songs from '../../data/songs.json';
 import state from '../../state';
 import PlayButton from '../PlayButton/PlayButton';
+import IconTargetable from '../IconTargetable/IconTargetable';
 
 const TrackList = () => {
   const snapshot = useSnapshot(state);
@@ -59,12 +60,8 @@ const TrackList = () => {
           ))}
         </ul>
         <div className={style.list__button}>shuffle play</div>
-        <div
-          className={style.list__next}
-          onClick={() => {
-            snapshot.toggleList();
-          }}
-        >
+
+        <IconTargetable handler={snapshot.toggleList}>
           <svg
             width="29"
             height="16"
@@ -79,7 +76,7 @@ const TrackList = () => {
               fill="#0FD65A"
             />
           </svg>
-        </div>
+        </IconTargetable>
       </div>
     </div>
   );

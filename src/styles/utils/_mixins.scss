@@ -10,7 +10,7 @@
 
 @mixin rem-calc($sizeValue: 16) {
   font-size: $sizeValue + rem;
-  font-size: ($sizeValue / 16) + px;
+  font-size: calc($sizeValue / 16) + px;
 }
 
 // fonts
@@ -21,7 +21,7 @@
   color: var(--color-grey-50);
 }
 
-@mixin textMain($color, $size:24) {
+@mixin textMain($color, $size: 24) {
   font-size: toRem($size);
   color: $color;
 }
@@ -35,4 +35,8 @@
   align-self: flex-end;
   font-size: toRem(24);
   color: var(--color-grey-50);
+}
+
+@mixin transition($type: transform, $time: 200ms, $style: ease-in-out) {
+  transition: $type $time $style;
 }

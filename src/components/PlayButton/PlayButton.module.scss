@@ -7,11 +7,16 @@
   height: 261px;
 }
 
+.smallContainer {
+    width: 127px;
+}
+
 .wrapper {
   position: absolute;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
+  cursor: pointer;
 }
 
 .smallWrapper {
