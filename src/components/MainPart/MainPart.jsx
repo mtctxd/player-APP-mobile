@@ -1,4 +1,5 @@
 import React from 'react';
+import PlayButton from '../PlayButton/PlayButton';
 
 import style from './MainPart.module.scss';
 
@@ -19,7 +20,7 @@ const MainPart = () => {
       <div className={style.actions}>
         <img src="./assets/shuffle_ico.svg" alt="shufle" />
         <img src="./assets/previous_ico.svg" alt="previous" />
-        <img src="./assets/Play_inactive.png" alt="play" />
+        <PlayButton image="./assets/Play_inactive.png"alt="play"/>
         <img src="./assets/next_ico.svg" alt="next" />
         <img src="./assets/repeat_ico.svg" alt="random" />
       </div>

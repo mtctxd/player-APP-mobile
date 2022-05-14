@@ -4,17 +4,16 @@ import { useSnapshot } from 'valtio';
 import style from './TrackList.module.scss';
 import songs from '../../data/songs.json';
 import state from '../../state';
+import PlayButton from '../PlayButton/PlayButton';
 
 const TrackList = () => {
   const snapshot = useSnapshot(state);
 
   return (
     <div
-      className={style.listContainer}
-      style={{
-        transform: `translateY(${snapshot.isListClicked ? 0 : 100}%)`,
-        transition: `all 250`
-      }}
+      className={`${style.listContainer} ${
+        snapshot.isListClicked ? style.active : ''
+      }`}
     >
       <div className={style.header}>
         <div
@@ -42,11 +41,7 @@ const TrackList = () => {
           <div className={style.song}>Self Conscious</div>
           <div className={style.artist}>Kanye west</div>
         </div>
-        <img
-          src="./assets/Play_inactive.png"
-          alt="playInactive"
-          className={style.play}
-        />
+        <PlayButton image="./assets/Play_inactive.png" alt="playInactive" style={style.play}/>
       </div>
       <div className={style.mainPart}>
         <ul className={style.list}>
