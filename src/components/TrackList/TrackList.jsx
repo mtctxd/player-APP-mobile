@@ -52,7 +52,7 @@ const TrackList = () => {
               <div className={style.name}>
                 <span className={style.songName}>{songItem.name}</span>
                 <span className={style.dots}>
-                  ........................................................
+                  .........................................................................................
                 </span>
               </div>
               <div className={style.duration}>{songItem.duration}</div>

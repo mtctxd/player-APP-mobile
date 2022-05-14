@@ -1,47 +1,15 @@
 import React from 'react';
+
 import PlayButton from '../PlayButton/PlayButton';
-import { v4 as uuidv4 } from 'uuid';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import SliderContainer from '../SliderContainer/SliderContainer';
 
 import style from './MainPart.module.scss';
-import 'swiper/scss';
 
 const MainPart = () => {
-  const slides = [
-    {
-      key: uuidv4(),
-      content: (
-        <img
-          className={style.mainImage}
-          src="./assets/unreleased_cover.png"
-          alt="unreleased"
-        />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <img
-          className={style.mainImage}
-          src="./assets/cover.png"
-          alt="unreleased"
-        />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <img
-          className={style.mainImage}
-          src="./assets/cover-1.png"
-          alt="unreleased"
-        />
-      ),
-    },
-  ];
   return (
     <div className={style.mainPartContainer}>
-      <div className={style.slider}>d
+      <div className={style.slider}>
+        <SliderContainer />
       </div>
       <div className={style.song}>
         <div className={style.name}>Self Conscious</div>

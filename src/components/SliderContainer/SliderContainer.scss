@@ -1,0 +1,18 @@
+.mySwiper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sliderItem {
+  width: fit-content;
+}

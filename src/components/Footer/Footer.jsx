@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSnapshot } from 'valtio';
 import state from '../../state';
+import IconTargetable from '../IconTargetable/IconTargetable';
 
 import style from './Footer.module.scss';
 
@@ -10,11 +11,7 @@ const Footer = () => {
   return (
     <div className={style.footerContainer}>
       <div className={style.itemsContainer}>
-        <div className={style.menu}
-          onClick={() => {
-            snapshot.toggleList();
-          }}
-        >
+        <IconTargetable handler={snapshot.toggleList}>
           <svg
             width="38"
             height="27"
@@ -29,12 +26,17 @@ const Footer = () => {
               fill="#0FD65A"
             />
           </svg>
-        </div>
+        </IconTargetable>
         <div className={style.info}>
-          <div className={style.next}>next</div>
-          <div className={style.name}>Livin' In A Movie</div>
+          <div className={style.name}>
+            <div className={style.next}>next</div>
+            <span className={style.songName}>
+              Livin' In A Movie
+              <span className={style.dots}>............</span>
+            </span>
+          </div>
         </div>
-        <div className={style.time}>3:27</div>
+        <div className={style.duration}>3:27</div>
       </div>
     </div>
   );
