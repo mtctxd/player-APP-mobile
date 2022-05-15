@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSnapshot } from 'valtio';
+import PlayButton from '../PlayButton/PlayButton';
+import IconTargetable from '../IconTargetable/IconTargetable';
+import Button from '../Button/Button';
 
 import style from './TrackList.module.scss';
 import songs from '../../data/songs.json';
 import state from '../../state';
-import PlayButton from '../PlayButton/PlayButton';
-import IconTargetable from '../IconTargetable/IconTargetable';
-import Button from '../Button/Button';
 
 const TrackList = () => {
   const snapshot = useSnapshot(state);

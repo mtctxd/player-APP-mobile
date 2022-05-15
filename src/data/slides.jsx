@@ -1,13 +1,15 @@
+import assets from "./assets";
+
 const slides = [
   {
     id: 1,
     content: (
       <img
-        src="./assets/cover.png"
+        src={assets.cover}
         alt="unreleased"
         className="sliderItem"
-        width='128xp'
-        height='128xp'
+        width="128xp"
+        height="128xp"
       />
     ),
   },
@@ -15,11 +17,11 @@ const slides = [
     id: 2,
     content: (
       <img
-        src="./assets/unreleased_cover.png"
+        src={assets.unreleased}
         alt="unreleased"
         className="sliderItem"
-        width='320px'
-        height='320px'
+        width="320px"
+        height="320px"
       />
     ),
   },
@@ -27,11 +29,11 @@ const slides = [
     id: 3,
     content: (
       <img
-        src="./assets/cover-1.png"
+        src={assets.cover_1}
         alt="unreleased"
         className="sliderItem"
-        width='128xp'
-        height='128xp'
+        width="128xp"
+        height="128xp"
       />
     ),
   },

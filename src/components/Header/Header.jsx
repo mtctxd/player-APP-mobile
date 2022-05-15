@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSnapshot } from 'valtio';
-import state from '../../state';
+
 import IconTargetable from '../IconTargetable/IconTargetable';
 
+import state from '../../state';
 import style from './Header.module.scss';
 
 const Header = () => {

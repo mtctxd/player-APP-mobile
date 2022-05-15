@@ -4,6 +4,7 @@ import PlayButton from '../PlayButton/PlayButton';
 import SliderContainer from '../SliderContainer/SliderContainer';
 
 import style from './MainPart.module.scss';
+import assets from '../../data/assets'
 
 const MainPart = () => {
   return (
@@ -17,14 +18,14 @@ const MainPart = () => {
       </div>
       <div className={style.actions}>
         <img
-          src="./assets/shuffle_ico.svg"
+          src={assets.shuffle}
           alt="shufle"
           className={style.action}
           width="30px"
           height="26px"
         />
         <img
-          src="./assets/previous_ico.svg"
+          src={assets.previous_ico}
           alt="previous"
           className={style.action}
           width="30px"
@@ -36,14 +37,14 @@ const MainPart = () => {
           </div>
         </div>
         <img
-          src="./assets/next_ico.svg"
+          src={assets.next_ico}
           alt="next"
           className={style.action}
           width="30px"
           height="26px"
         />
         <img
-          src="./assets/repeat_ico.svg"
+          src={assets.repeat_ico}
           alt="random"
           className={style.action}
           width="30px"

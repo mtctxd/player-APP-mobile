@@ -1,19 +1,21 @@
 import React from 'react';
 import { useSnapshot } from 'valtio';
-import state from '../../state';
+
 import IconTargetable from '../IconTargetable/IconTargetable';
 
+import state from '../../state';
+import assets from '../../data/assets';
 import style from './Menu.module.scss';
 
 const Menu = () => {
   const snapshot = useSnapshot(state);
 
-  console.log(snapshot.isMenuActive);
-
   return (
-    <div className={`${style.container} ${
+    <div
+      className={`${style.container} ${
         snapshot.isMenuActive ? style.active : ''
-    }`}>
+      }`}
+    >
       <div className={style.header}>
         <IconTargetable handler={snapshot.toggleMenu} zIndex={9}>
           <svg
@@ -54,7 +56,7 @@ const Menu = () => {
       <div className={style.main}>
         <img
           className={style.image}
-          src="./assets/unreleased_cover.png"
+          src={assets.unreleased}
           alt="unreleased"
         />
         <div className={style.song}>

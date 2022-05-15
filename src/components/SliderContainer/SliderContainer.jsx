@@ -1,12 +1,11 @@
-// import React from 'react';
-
 import React from 'react';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-import slides from '../../data/slides';
 import './SliderContainer.scss'
+import slides from '../../data/slides';
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 

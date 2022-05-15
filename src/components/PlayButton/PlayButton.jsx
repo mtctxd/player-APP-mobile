@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSnapshot } from 'valtio';
-import state from '../../state';
 
+import state from '../../state';
+import assets from '../../data/assets';
 import style from './PlayButton.module.scss';
 
 const PlayButton = ({ type }) => {
@@ -30,8 +31,8 @@ const PlayButton = ({ type }) => {
           onClick={() => toggleSongPlaying()}
           src={
             isSongPlaying
-              ? './assets/Play_active.png'
-              : './assets/Play_inactive.png'
+              ? assets.play_active
+              : assets.play_inactive
           }
           alt={''}
           style={{
