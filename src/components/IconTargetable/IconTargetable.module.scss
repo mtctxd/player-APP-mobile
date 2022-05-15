@@ -1,15 +1,12 @@
 @import '../../styles/index.scss';
 
 .container {
+  @include svgActions(
+    var(--color-green-80),
+    var(--color-green-50),
+    var(--color-green-100),
+  );
   position: relative;
-
-  & svg * {
-    @include svgActions(
-      var(--color-green-80),
-      var(--color-green-100),
-      var(--color-green-50)
-    );
-  }
 }
 
 .aria {
@@ -22,5 +19,3 @@
   cursor: pointer;
   border-radius: 50%;
 }
-
-

@@ -20,18 +20,34 @@ const MainPart = () => {
           src="./assets/shuffle_ico.svg"
           alt="shufle"
           className={style.action}
+          width="30px"
+          height="26px"
         />
         <img
           src="./assets/previous_ico.svg"
           alt="previous"
           className={style.action}
+          width="30px"
+          height="26px"
         />
-        <PlayButton className={style.action} />
-        <img src="./assets/next_ico.svg" alt="next" className={style.action} />
+        <div className={style.playButtonContainer}>
+          <div className={style.playButtonWrapper}>
+            <PlayButton />
+          </div>
+        </div>
+        <img
+          src="./assets/next_ico.svg"
+          alt="next"
+          className={style.action}
+          width="30px"
+          height="26px"
+        />
         <img
           src="./assets/repeat_ico.svg"
           alt="random"
           className={style.action}
+          width="30px"
+          height="26px"
         />
       </div>
       <div className={style.progress}>

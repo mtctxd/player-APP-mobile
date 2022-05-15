@@ -6,6 +6,8 @@ const slides = [
         src="./assets/cover.png"
         alt="unreleased"
         className="sliderItem"
+        width='128xp'
+        height='128xp'
       />
     ),
   },
@@ -16,6 +18,8 @@ const slides = [
         src="./assets/unreleased_cover.png"
         alt="unreleased"
         className="sliderItem"
+        width='320px'
+        height='320px'
       />
     ),
   },
@@ -26,6 +30,8 @@ const slides = [
         src="./assets/cover-1.png"
         alt="unreleased"
         className="sliderItem"
+        width='128xp'
+        height='128xp'
       />
     ),
   },

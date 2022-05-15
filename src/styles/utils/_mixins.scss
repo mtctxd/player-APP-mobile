@@ -37,6 +37,13 @@
   color: var(--color-grey-50);
 }
 
+@mixin dots {
+  letter-spacing: 10px;
+  color: var(--color-grey-50);
+}
+
+// ui actions
+
 @mixin buttonActions($color1, $color2, $color3) {
   background-color: $color1;
   transition: background-color 200ms ease-in-out;
@@ -51,19 +58,14 @@
 }
 
 @mixin svgActions($color1, $color2, $color3) {
-  fill: $color1;
-  transition: fill 200ms ease-in-out;
-
-  &:hover {
+  & svg * {
+    fill: $color1;
+    transition: fill 200ms ease-in-out;
+  }
+  &:hover svg * {
     fill: $color2;
   }
-
-  &:active {
+  &:active svg * {
     fill: $color3;
   }
-}
-
-@mixin dots {
-  letter-spacing: 10px;
-  color: var(--color-grey-50);
 }

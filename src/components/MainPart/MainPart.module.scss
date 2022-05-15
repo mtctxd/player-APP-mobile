@@ -15,7 +15,7 @@
 
 .slider {
   width: 100%;
-  flex-grow: 1;
+  cursor: grab;
 }
 
 .artist {
@@ -30,14 +30,27 @@
 .actions {
   @include container;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto auto 257px auto auto;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .action {
   cursor: pointer;
+}
+
+.playButtonContainer {
+  position: relative;
+  
+  height: 172px;
+  width: 165px;
+}
+
+.playButtonWrapper {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .progress {
