@@ -85,6 +85,7 @@
         rgba(255, 255, 255, 0.0001) 100%
       ),
       rgba(255, 255, 255, 0.0001);
+    pointer-events: none;
   }
 }
 
@@ -113,8 +114,7 @@
 }
 
 .dots {
-  letter-spacing: 10px;
-  color: var(--color-grey-50);
+  @include dots;
 }
 
 .duration {

@@ -37,10 +37,6 @@
   color: var(--color-grey-50);
 }
 
-@mixin transition($type: transform, $time: 200ms, $style: ease-in-out) {
-  transition: $type $time $style;
-}
-
 @mixin buttonActions($color1, $color2, $color3) {
   background-color: $color1;
   transition: background-color 200ms ease-in-out;
@@ -65,4 +61,9 @@
   &:active {
     fill: $color3;
   }
+}
+
+@mixin dots {
+  letter-spacing: 10px;
+  color: var(--color-grey-50);
 }

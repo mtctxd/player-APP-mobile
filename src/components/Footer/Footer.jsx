@@ -9,8 +9,9 @@ const Footer = () => {
   const snapshot = useSnapshot(state);
 
   return (
-    <div className={style.footerContainer}>
-      <div className={style.itemsContainer}>
+    <div className={style.container}>
+      <div className={style.wrapper}>
+      <div className={style.icon}>
         <IconTargetable handler={snapshot.toggleList}>
           <svg
             width="38"
@@ -27,16 +28,15 @@ const Footer = () => {
             />
           </svg>
         </IconTargetable>
-        <div className={style.info}>
-          <div className={style.name}>
-            <div className={style.next}>next</div>
-            <span className={style.songName}>
-              Livin' In A Movie
-              <span className={style.dots}>............</span>
-            </span>
-          </div>
+      </div>
+      <div className={style.song__info}>
+        <div className={style.text}>
+          <div className={style.next}>next</div>
+          <div className={style.name}>Livin' In A Movi</div>
         </div>
-        <div className={style.duration}>3:27</div>
+        <div className={style.dots}>................................................................................................................................................</div>
+      </div>
+      <div className={style.duration}>3:27</div>
       </div>
     </div>
   );
